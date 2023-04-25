@@ -21,7 +21,7 @@ client = gs.authorize(
 sheet_participants = client.open('participants').worksheet('production')
 content_participants = sheet_participants.get_all_values()
 usernames = sheet_participants.col_values(2)
-chat_ids = sheet_participants.col_values(1)
+chat_ids = sheet_participants.col_values(1)[1:]
 
 bot = telebot.TeleBot(token=BOT_TOKEN, threaded=False)
 

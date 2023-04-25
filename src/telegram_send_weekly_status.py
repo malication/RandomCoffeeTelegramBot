@@ -28,7 +28,7 @@ sheet_participants = client.open('participants').worksheet('production')
 content_participants = sheet_participants.get_all_values()
 participants_df = pd.DataFrame(content_participants[1:], columns=content_participants[0])
 
-chat_ids = sheet_participants.col_values(1)
+chat_ids = sheet_participants.col_values(1)[1:]
 
 session_full_info = pd.merge(last_session, participants_df,  how='left', left_on=['first'], right_on = 'id')
 session_full_info = pd.merge(session_full_info, participants_df,  how='left', left_on=['second'], right_on = 'id')
