@@ -42,9 +42,9 @@ for i in range(len(last_session)):
 for chat_id in chat_ids:
     try:
         if len(last_session) == len(participants_df[participants_df['is_active'] == '1']):
-            bot.send_message(chat_id, 'Привет! Это информация о парах на ближайшие две недели.')
+            bot.send_message(chat_id, 'Это информация о парах на ближайшие две недели.')
         else:
-            bot.send_message(chat_id, 'Привет! Это информация о парах на ближайшие две недели.'
+            bot.send_message(chat_id, 'Это информация о парах на ближайшие две недели.'
                                         '\n\nВ этот раз участников было нечётное количество, поэтому образовалась пара из трёх человек. '
                                         'В такой паре можно пойти на Random Coffee сразу втроём.')
 
