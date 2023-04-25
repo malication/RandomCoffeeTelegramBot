@@ -44,7 +44,7 @@ def callback_action(callback):
         username = callback.message.chat.username
         rownum = usernames.index(username) + 1
         sheet_participants.update_cell(rownum, 5, '1')
-        print(f'Updated flag for user {username}')
+        print(f'{username} is participating')
 
         bot.send_message(
             callback.message.chat.id,
